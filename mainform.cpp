@@ -62,8 +62,20 @@ void MainForm::FinishReadyIP()
     file.open(QIODevice::WriteOnly);
     file.write(result_ip);
     file.close();
-    ///*Smtp без SSL
+    /*Smtp без SSL
     Smtp s(smtp_server,login,password);
+    //s.SetSmtpServer(smtp_server);
+    //s.SetLogin(login);
+    //s.SetPassword(password);
+    QString str_date="";
+    str_date+=QString::number(QDate::currentDate().day())+"."+
+              QString::number(QDate::currentDate().month())+"."+
+              QString::number(QDate::currentDate().year());
+    str_date+=" "+QTime::currentTime().toString();
+    s.SendMessage(login,"IP-adress on "+str_date+" = "+result_ip);
+    */
+    ///*Smtp с SSL
+    Smtps s(smtp_server,login,password);
     //s.SetSmtpServer(smtp_server);
     //s.SetLogin(login);
     //s.SetPassword(password);

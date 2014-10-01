@@ -7,6 +7,7 @@
 #include <QCloseEvent>
 
 #include "Class/smtp.h"
+#include "Class/smtps.h"
 
 namespace Ui {
 class MainForm;

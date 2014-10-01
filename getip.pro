@@ -15,11 +15,13 @@ TEMPLATE = app
 SOURCES += \
     main.cpp \
     mainform.cpp \
-    Class/smtp.cpp
+    Class/smtp.cpp \
+    Class/smtps.cpp
 
 HEADERS  += \
     mainform.h \
-    Class/smtp.h
+    Class/smtp.h \
+    Class/smtps.h
 
 FORMS    += \
     mainform.ui
